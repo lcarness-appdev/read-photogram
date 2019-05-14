@@ -17,7 +17,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module PhotogramStats
+module PhotogramRead
   class Application < Rails::Application
     config.generators do |g|
           g.test_framework nil
@@ -34,5 +34,7 @@ module PhotogramStats
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.active_record.belongs_to_required_by_default = false
   end
 end
