@@ -16,9 +16,11 @@ It's the familiar old Photogram domain model:
 
 ![Domain Model](erd.png?raw=true "Domain Model")
 
- - After you've run `bin/setup`, the tables will already be created for you. You can pop into `rails console` and verify for yourself.
+ - After you've run `bin/setup`, the tables will already be created for you. You can pop into `rails console` and verify for yourself if you want to.
 
- - If you want to, you can run `rails dummy:reset` to pre-populate all of the tables with some dummy data.
+ - Click "Run Project" to start up your server and navigate to your live application. You'll see that it's just the "Yay! You're on Rails" page — other than the database, this is a blank application. There are no routes. Check out `config/routes.rb` to verify this.
+
+ - Run `rails dummy:reset` to pre-populate all of the tables with some dummy data.
 
     > Note that if for some reason later you want to reset the database again, you need to first destroy it:
     >
@@ -32,8 +34,6 @@ It's the familiar old Photogram domain model:
     > rails db:migrate
     > rails dummy:reset
     > ```
-
- - Click "Run Project" to start up your server and navigate to your live application. You'll see that it's just the "Yay! You're on Rails" page — other than the database, this is a blank application. There are no routes. Check out `config/routes.rb` to verify this.
 
 ## Tasks
 
