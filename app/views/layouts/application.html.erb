@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Photogram READ</title>
+    <meta name="crsf-param" content="authenticity_token">
+    
     <%= csrf_meta_tags %>
 
     <!-- Expand the number of characters we can use in the document beyond basic ASCII 🎉 -->
@@ -9,6 +11,7 @@
 
     <!-- Connect Font Awesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="/light.css">
 
     <%= csp_meta_tag %>
 
@@ -17,6 +20,34 @@
   </head>
 
   <body>
+    <div>
+      <a href = "/">
+        <i class = "fab fa-firstdraft fa-fw"></i>
+        Home
+      </a>
+    </div>
+    
+    <div>
+      <a href = "/recent">
+        <i class = "fas fa-clock fa-fw"></i>
+        Recent
+      </a>
+    </div>
+    
+    <div>
+      <a href = "/popular">
+        <i class = "fas fa-fire fa-fw"></i>
+        Popular
+      </a>
+    </div>
+    
+    <div>
+      <a href = "/users">
+        <i class = "fas fa-users"></i>
+        All Users
+      </a>
+    </div>
+    
     <%= yield %>
   </body>
 </html>
