@@ -1,0 +1,24 @@
+<h1>Recent Photos</h1>
+
+<table border="1">
+    <tr>
+        <th>Image</th>
+        <th>Action</th>
+        <th>Owner</th>
+        <th>Posted</th>
+        <th>Likes</th>
+    </tr>
+    
+    <% @photos.each do |pic| %>
+    <tr>
+        <td><img src = "<%= pic.image %>"></td>
+        <td><%= pic.caption %></td>
+        <td><%= pic.owner.username %></td>
+        <td><%#= ((Time.now - pic.created_at) / 60 / 60 / 24).round(0) %>
+        <%= time_ago_in_words(pic.created_at) %>
+        </td>
+        <td><%= pic.likes_count %> likes</td>
+        <td>Show details</td>
+    </tr>
+    <% end %>
+</table>

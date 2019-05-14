@@ -13,4 +13,7 @@
 #
 
 class Photo < ApplicationRecord
+    def owner
+        return User.where({:id => self.owner_id}).at(0)
+    end
 end
